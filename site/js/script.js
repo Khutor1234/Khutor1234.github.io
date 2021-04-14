@@ -6,11 +6,13 @@ window.addEventListener('DOMContentLoaded', () => {
     services = document.querySelector('.services');
     btn = document.getElementById("myBtn");
     sections = document.querySelectorAll('section');
+    body = document.querySelector('body');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
         menu.classList.toggle('menu_active');
         overlay.classList.toggle('menu_overlay_active');
+        body.classList.toggle('overflow-hidden');
     });
 
     menuItem.forEach(item => {
@@ -18,18 +20,21 @@ window.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.toggle('hamburger_active');
             menu.classList.toggle('menu_active');
             overlay.classList.toggle('menu_overlay_active');
+            body.classList.toggle('overflow-hidden');
         })
     });
 
     window.addEventListener('scroll', function() {
         let y = window.scrollY;
-        if(y > 100){
+        if(y > 100 && document.documentElement.clientWidth > 576){
             btn.style.display = "block";
             btn.classList.add('animate__fadeIn');
         } else {
             btn.style.display = "none";   
         }
     });
+
+    console.log(document.documentElement.clientWidth);
     
     btn.addEventListener('click', () => {
         document.body.scrollTop = 0;
