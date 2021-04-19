@@ -7,6 +7,19 @@ window.addEventListener('DOMContentLoaded', () => {
     btn = document.getElementById("myBtn");
     sections = document.querySelectorAll('section');
     body = document.querySelector('body');
+    btnContact = document.querySelector('.menu_link_contact');
+    contact = document.querySelector('.contact_hidden');
+    cross = document.querySelector('.cross');
+
+
+    btnContact.addEventListener('click', (e) => {
+        e.preventDefault();
+        contact.classList.toggle('contact_hidden_active'); 
+    });
+
+    cross.addEventListener('click', (e) => {
+        contact.classList.toggle('contact_hidden_active'); 
+    });
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
@@ -59,12 +72,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
                     animItem.classList.add('_active');
-                } else {
-                    if(!animItem.classList.contains('_anim-no-hide')){
-                        animItem.classList.remove('_active');
-                    }
-                }
-
+                } 
+                // else {
+                //     // if(!animItem.classList.contains('_anim-no-hide')){
+                //     //     animItem.classList.remove('_active');
+                //     // }
+                // }
             }
         }
         function offset(el){
@@ -75,4 +88,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         animOnScroll();
     }
+
+
 })

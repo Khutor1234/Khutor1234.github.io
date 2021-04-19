@@ -1,0 +1,85 @@
+@media (max-width: 1200px)
+    .contact
+        background: none
+        &_form
+            width: 860px
+            input
+                width: 420px
+    .contact_hidden
+        &_form
+            width: 100%
+            margin-top: 30px
+            label
+            input
+                width: 210px
+                margin-bottom: 10px
+            textarea
+                height: 100px
+
+@media (max-width: 992px)
+    .contact
+        &_form
+            width: 100%
+            input
+                width: 340px
+    .contact_hidden
+        &_form
+            width: 100%
+            margin-top: 30px
+            label
+                font-size: 15px
+            input
+                width: 140px
+            textarea
+                margin-bottom: 20px
+    .form_descr
+        font-size: 25px
+        line-height: 25px
+@media (max-width: 768px)
+    .contact
+        &_form
+            input
+                width: 250px
+    .contact_hidden
+        &_form
+            label
+                font-size: 15px
+            input
+                min-width: calc(50vw - 40px)
+                height: 30px
+            textarea
+                height: 100px
+        &_wrapper
+            .block
+                width: 50%
+                height: 100%
+                &:nth-child(1)
+                    padding: 20px
+                &:nth-child(2)
+                    padding: 20px
+        .info
+            padding-left: 30px
+
+@media (max-width: 576px)
+    .contact
+        &_form
+            input
+                min-width: calc(100vw - 20px)
+            label
+                font-size: 17px
+    .contact_hidden
+        &_form
+            input
+                min-width: calc(100vw - 40px)
+                height: 40px
+        &_wrapper
+            .block
+                width: 100%
+                &:nth-child(1)
+                    padding: 20px
+                    padding-top: 60px
+                &:nth-child(2)
+                    display: none
+    .cross
+        span
+            background-color: #000

@@ -1,0 +1,90 @@
+@media (max-width: 1200px)
+    .location
+        &_wrapper
+            width: 760px
+        &_map
+            width: 500px
+            margin-left: 50px
+            height: 300px
+
+@media (max-width: 992px)
+	.location
+        &_wrapper
+            width: 720px
+        &_map
+            width: 400px
+	.offer
+		&_img
+			width: 180px
+			height: 180px
+			margin-left: 50px
+		&_item
+			font-size: 16px
+		&_block
+			width: 720px
+			&_text
+				font-size: 25px
+
+@media (max-width: 768px)
+	.location
+		&_wrapper
+			width: 500px
+		&_map
+			margin-left: 20px
+			height: 200px
+			width: 400px
+		&_country, &_city
+			font-size: 25px
+			line-height: 25px
+		&_addr, &_phone
+			font-size: 17px
+			line-height: 20px
+		&_email, &_skype
+			font-size: 15px
+			line-height: 17px
+	.information
+		&_rated
+			width: 540px
+		&_item
+			width: 170px
+	.offer
+		height: 500px
+		&_img
+			display: none
+		&_item
+			font-size: 15px
+		&_block
+			width: 540px
+			&_text
+				font-size: 15px
+ 
+@media (max-width: 576px)
+	.information
+		&_rated
+			width: 100%
+	.offer
+		&_wrapper
+			flex-direction: column
+		&_block
+			width: 100%
+			&_img
+				width: 50px
+				height: 50px
+				&_3
+					width: 100px
+			&_text
+				text-align: center
+		&_item
+			&:nth-child(1)
+				margin-top: 0
+	.location
+		&_wrapper
+			width: 100%
+			flex-direction: column
+		&_map
+			margin-left: 0
+			height: 200px
+			width: 100%
+		&_info
+			order: 1
+			margin-top: 20px

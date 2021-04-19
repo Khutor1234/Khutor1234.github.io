@@ -1,0 +1,172 @@
+@media (max-width: 1200px)
+	.container
+		max-width: 960px
+		margin: 0 auto
+
+@media (max-width: 992px)
+	.container
+		max-width: 720px
+
+@media (min-width: 769px)
+	.menu
+		&_link
+			&_contact
+				&:before
+					content: ''
+					position: absolute
+					display: block
+					top: -20px
+					left: -37px
+					right: -37px
+					bottom: -20px
+			&_animate
+				&:before
+					content: ''
+					position: absolute
+					display: block
+					top: -20px
+					left: 0px
+					right: 0px
+					bottom: -20px
+				&[href = '#']
+					color: rgba(82, 22, 95, 0.7)
+					display: block
+					margin-top: -20px
+					&::after
+						border-bottom: 5px solid rgb(82, 22, 95)
+						bottom: -5px
+						transition: all .2s linear
+				&::after
+					content: ""
+					display: block
+					width: 100%
+					position: absolute
+					bottom: -10px
+				&:hover
+					display: block
+					margin-top: -20px
+					text-decoration: none
+					color: rgba(82, 22, 95, 0.7)
+					transition: all .5s
+					&::after
+						// border-bottom: 5px solid rgb(82, 22, 95)
+						// bottom: -5px
+						// transition: all .2s linear
+		&_item
+			&:last-child
+				padding-top: 9px
+				width: 150px
+				height: 50px
+				background: linear-gradient(122.26deg, #C4204F 19.83%, #B41D52 25.53%, #6C115D 52.15%, #380866 74.3%, #18026B 90.9%, #0C006D 100.06%)
+				border-radius: 7px
+				text-align: center
+				transition: all .5s
+				&:hover
+					box-shadow: 0px 0px 15px #AB1B53
+				.menu_link
+					color: #fff
+			&:first-child
+				flex-basis: 15%
+				transition: all 0.3s
+				img
+					height: 60px
+				
+	.menu_logo
+		display: none
+
+@media (min-width: 993px)
+	.menu
+		&_item
+			&:first-child
+				flex-basis: 40%
+			&:last-child
+				width: 200px
+
+
+@media (max-width: 768px)
+	.overflow-hidden
+    	overflow: hidden
+	.container
+		max-width: 540px
+	.menu
+		position: fixed
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		top: 0
+		left: -100%
+		width: 50%
+		height: 100vh
+		padding: 50px 15px
+		z-index: 5
+		background: linear-gradient(180deg, #F879C7 0.69%, #1426D9 89.66%)
+		transition: 0.6s all
+		&_active 
+			left: 0
+		&_item 
+			padding-right: 0
+			border: none
+			margin: 10px 0
+			&:first-child
+				position: absolute
+				bottom: 30px
+				left: 15px
+				img
+					width: 90px
+		&_link 
+			color: #fff
+			font-size: 25px
+		&_overlay
+			transition: 0.6s all
+			&_active
+				right: 0
+
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 30px
+		height: 12px
+		z-index: 5
+		span 
+			display: block 
+			height: 3px
+			width: 100%
+			background-color: #000 
+			margin-bottom: 3px
+			transition: 0.5s all
+		&_active 
+			span 
+				margin-bottom: -3px 
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
+	.menu_social
+		display: flex
+		position: absolute
+		bottom: 45px
+		right: 15px
+		img
+			width: 40px
+		&_item
+			margin: 0 5px
+	.menu_logo
+		display: flex
+		position: absolute
+		top: 10px
+		left: 10px
+		img
+			height: 65px
+
+@media (max-width: 576px)
+	.container
+	   width: 100%
+	   padding: 0 10px
+	.menu
+		width: 100%
