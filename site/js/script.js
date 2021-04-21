@@ -41,17 +41,28 @@ window.addEventListener('DOMContentLoaded', () => {
         let y = window.scrollY;
         if(y > 100 && document.documentElement.clientWidth > 576){
             btn.style.display = "block";
-            btn.classList.add('animate__fadeIn');
         } else {
             btn.style.display = "none";   
         }
     });
 
+
     console.log(document.documentElement.clientWidth);
     
+    var timer;
+    function up() {
+        var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+        if(top > 0) {
+            window.scrollBy(0,-30);
+            timer = setTimeout(up, 5);
+        } else clearTimeout(timer);
+        return false;
+    }
+
     btn.addEventListener('click', () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0; 
+        // document.body.scrollTop = 0;
+        // document.documentElement.scrollTop = 0; 
+        up();
     });
 
     const animItems = document.querySelectorAll('._anim-items');
