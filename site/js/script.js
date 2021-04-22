@@ -15,10 +15,12 @@ window.addEventListener('DOMContentLoaded', () => {
     btnContact.addEventListener('click', (e) => {
         e.preventDefault();
         contact.classList.toggle('contact_hidden_active'); 
+        body.classList.toggle('overflow-hidden');
     });
 
     cross.addEventListener('click', (e) => {
         contact.classList.toggle('contact_hidden_active'); 
+        body.classList.toggle('overflow-hidden');
     });
 
     hamburger.addEventListener('click', () => {
