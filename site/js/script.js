@@ -15,19 +15,19 @@ window.addEventListener('DOMContentLoaded', () => {
     btnContact.addEventListener('click', (e) => {
         e.preventDefault();
         contact.classList.toggle('contact_hidden_active'); 
-        body.classList.toggle('overflow-hidden');
+        body.style.overflow = 'hidden';
     });
 
     cross.addEventListener('click', (e) => {
         contact.classList.toggle('contact_hidden_active'); 
-        body.classList.toggle('overflow-hidden');
+        body.style.overflow = 'visible';
     });
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
         menu.classList.toggle('menu_active');
         overlay.classList.toggle('menu_overlay_active');
-        body.classList.toggle('overflow-hidden');
+        body.style.overflow = 'hidden';
     });
 
     menuItem.forEach(item => {
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.toggle('hamburger_active');
             menu.classList.toggle('menu_active');
             overlay.classList.toggle('menu_overlay_active');
-            body.classList.toggle('overflow-hidden');
+            body.style.overflow = 'visible';
         })
     });
 
